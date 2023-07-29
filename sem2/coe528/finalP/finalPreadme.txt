@@ -9,3 +9,7 @@ The entire app must run simply by opening the application file
 Github contribution doesn't accurately reflect contribution numbers. 
 Contributers in order of amount:
 Andy Cao, Nini Yang, Luxshan Sivathasan, Danielle Chiu, Andy Lin
+
+#Mini tutorial:
+Admin login: admin, admin
+Test login: Nini, 123
