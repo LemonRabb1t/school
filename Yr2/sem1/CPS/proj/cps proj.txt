@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <math.h>
+#define SUP 0
+#define MICH 1
+#define HURON 2
+#define ERIE 3
+#define ONT 4
+#define STCLAIR 5
+#define ROW 6
+#define COL 366
+void Lakes(double array[ROW][COL], int row, int col);
+double WinAvg(double a[ROW][COL], int lake);
+int swimdays(double a[ROW][COL], int lake);
+int daysFrozen(double a[ROW][COL]);
+void q6(double LakeTemp[][COL]);
+
+int main( )
+{
+	//calls Lakes function to read data file of lake temperatures and record in an array
+	double LakeTemp[ROW][COL];
+	Lakes(LakeTemp, ROW, COL);
+	
+	// q 6 
+	q6(LakeTemp);
+	
+	// q 7
+	printf("\n\nQ.7: Days able to be swam\nSuperior: %d\nMichigan: %d\nHuron: %d\nErie: %d\nOntario: %d\nSt. Clair: %d\n", swimdays(LakeTemp, SUP)
+, swimdays(LakeTemp, MICH), swimdays(LakeTemp, HURON), swimdays(LakeTemp, ERIE), swimdays(LakeTemp, ONT), swimdays(LakeTemp, STCLAIR));
+
+    // q 8
+    printf("\nQ.8: Days frozen: %d", daysFrozen(LakeTemp));
+    
+    return 0;
+}
+
+
+// q 6
+void q6(double LakeTemp[][COL]){
+    char *names[6];
+	int lakeord[6];
+	double wavgs[ROW], MAX;
+	int MAXpos;
+
+	for (int i=0;i<ROW;i++){
+	    wavgs[i] = WinAvg(LakeTemp, i);
+	}
+	
+	// sort
+    
+    for (int i=0;i<ROW;i++){
+        MAX = wavgs[i];
+        MAXpos = i;
+        
+        for (int j=0;j<ROW;j++){
+            if (MAX<wavgs[j]){
+                MAX = wavgs[j];
+                MAXpos = j;
+            }
+        }
+       if (MAXpos==0){
+           names[i]="Superior";
+       } else if (MAXpos==1){
+           names[i]="Michigan";
+       } if (MAXpos==2){
+           names[i]="Huron";
+       } if (MAXpos==3){
+           names[i]="Erie";
+       } if (MAXpos==4){
+           names[i]="Ontario";
+       } if (MAXpos==5){
+           names[i]="St. Clair";
+       }
+       wavgs[MAXpos]=-1;
+    }
+	
+	printf("\nQ.6: Winter average temps from warm to cold: ");
+	for (int i=0;i<ROW;i++){
+	   printf("%s ", names[i]);
+	}
+}
+
+double WinAvg(double a[ROW][COL], int lake){
+    double winavg = 0, winavgC = 90;
+
+    // 1-79 & 355-365
+    for (int i=0;i<=79;++i){
+        winavg+= a[lake][i];
+    }
+
+    for (int i=354;i<=365;++i){
+        winavg+= a[lake][i];
+    }
+    
+    winavg/=winavgC;
+    
+    return (winavg);
+}
+
+
+// q 8
+int daysFrozen(double a[ROW][COL]){
+    int daysFrozenc = 0;
+    for (int i=1;i<ROW;i++){
+        for (int j=1;j<COL;j++){
+            if (a[i][j]<0){
+                daysFrozenc++;
+            }
+        }
+    }
+    return (daysFrozenc);
+}
+
+// q 7
+int swimdays(double a[ROW][COL], int lake){
+    int swimdaysc = 0;
+    
+    for (int i=0;i<COL;i++){
+        if (a[lake][i]>20){
+           swimdaysc++;
+        }
+    }
+    return (swimdaysc);
+}
+
+
+// tyler stuff
+//Lakes function that reads data file and stores into an array for each lake
+void Lakes(double array[ROW][COL], int row, int col){
+	 
+	double sup, mich, huron, erie, ont, stclair, temp;
+	FILE* data;
+	data = fopen("avgtemps.dat", "r");
+	
+	for(int i = 0; i<366;i++){
+		fscanf(data, "%lf%lf", &temp, &temp);
+		fscanf(data, "%lf%lf%lf%lf%lf%lf", &sup, &mich, &huron, &erie, &ont, &stclair);
+		array[SUP][i] = sup;
+		array[MICH][i] = mich;
+		array[HURON][i] = huron;
+		array[ERIE][i] = erie;
+		array[ONT][i] = ont;
+		array[STCLAIR][i] = stclair;
+	}
+	fclose(data);									
+}

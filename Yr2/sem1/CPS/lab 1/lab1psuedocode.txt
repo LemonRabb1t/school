@@ -1,0 +1,30 @@
+ 
+1.
+1. create a blank list to hold values
+ 2. create a loop to ask user for (1) value, check validity of input, then append values to end of array
+ 3. calculate list size, 
+ 4.find min and append to dif blank list, repeat until all values are checked
+
+ex
+
+3. set of steps for find P and SA of trangle from shortest sides
+write a C program that does algorith, displays to 2 dec plaecs
+
+main:
+1. obtain sides from users and assign to double vars
+2. put data through algorithm hyp, algorithm P, algorithm SA
+3. output results from P & SA on the screen
+
+hyp (returns hypoteneuse):
+1. obtain 2 double vars
+2. assign double value of (side**2)(side**2) into var l
+3. sqrt the value l
+4. return l
+
+P (returns perimeter):
+1. obtains 3 double vars
+2. return sum of all 3 doubles
+
+SA (returns surface area):
+1. obtain 2 double vars
+2. return the product of the vars divided by 2
