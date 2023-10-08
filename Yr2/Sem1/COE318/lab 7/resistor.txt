@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package coe318.lab7;
+
+/**
+ *
+ * @author N
+ */
+public class resistor extends componentParent{
+    private static int resNum = 0;
+    
+    public resistor (int no1, int no2, double v){
+        super(no1,  no2,  v);
+        // invalid inputs
+        if ((v < 0)|| (no1 == no2)){
+            // resist neg or 0
+            //cant be same node
+            System.out.println("Check resistor values");
+        } 
+        // add to cir
+        else {
+            resNum++; // +1 to iterations
+            this.setCount(resNum); // set the number of iterations
+            Circuit.getInstance().add(this); // add comp to cir
+        }
+        
+    }
+   
+@Override
+    public String toString(){
+        return "R"+this.getCount()+" "+this.getNode(1)+" "+this.getNode(2)+" "+this.getV();
+    }
+}

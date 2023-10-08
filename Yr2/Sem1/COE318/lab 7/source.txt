@@ -1,0 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package coe318.lab7;
+
+/**
+ *
+ * @author N
+ */
+public class source extends componentParent {
+
+    private static int souNum = 0;
+
+    public source(int no1, int no2, double v) {
+        super(no1, no2, v);
+        souNum++; // +1 iterations
+        this.setCount(souNum); // set the source num
+        Circuit.getInstance().add(this); // add source
+
+    }
+
+    // to String
+    @Override
+    public String toString() {
+        return "V" + this.getCount() + " " + this.getNode(1) + " " + this.getNode(2) + " DC " + this.getV();
+    }
+}

@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package coe318.lab6;
+
+/**
+ *
+ * @author N
+ */
+public class Resistor {
+
+    Node Nodes[]= new Node[2];
+    double resist;
+    int ID;
+    private static int nextID;
+
+    public Resistor(double resistance, Node node1, Node node2) {
+        // excep
+        if (resistance < 0) {
+            // resist neg or 0
+            throw new IllegalArgumentException("Error: Negative or Zero Resistance");
+        }
+        if ((node1 == null) || (node2 == null)) {
+            // empty nodes
+            throw new IllegalArgumentException("Error: Null node(s) detected");
+        }
+        // cant be same node
+        if (node1 == node2) {
+            throw new IllegalArgumentException("Error: Can't have resistance in 1 node");
+        }
+        Nodes[0] = node1;
+        Nodes[1] = node2;
+        resist = resistance;
+        ID = nextID;
+        nextID++;
+        Circuit.getInstance().add(this);
+    }
+
+    public Node[] getNodes() {
+        return Nodes;
+    }
+
+    @Override
+    public String toString() {
+        return "R ID: " + this.ID + "\nN1 ID: "+ Nodes[0].toString() + "\nN2 ID: "+ Nodes[1].toString() +"\nResistance: " + resist;
+    }
+
+}

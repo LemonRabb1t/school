@@ -1,0 +1,76 @@
+package coe318.lab5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author N
+ */
+public class SimpleUI implements UserInterface {
+
+    public BlackjackGame game;
+    public String userChoice;
+    public static boolean hitChoice;
+    private Scanner input = new Scanner(System.in);
+
+    @Override // override ui setGame method to create a new game 
+    public void setGame(BlackjackGame Game) {
+        game = Game;
+    }
+
+    @Override // override ui display method to display cards
+    public void display() {
+        System.out.println("~~~~~~~~~~~~~~~~~~");
+        System.out.println("House Holds: ");
+        System.out.println(this.game.houseCards);
+
+        System.out.println("You hold: ");
+        System.out.println(this.game.playerCards);
+
+    }
+
+    @Override // override ui hitMe method to give player new card
+    public boolean hitMe() {
+        System.out.println("Would you like another card? ");
+        System.out.println("Input(y/n)");
+        userChoice = input.next();
+        // yes, ye, y (caps no matter)
+        if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes") || userChoice.equalsIgnoreCase("ye")) {
+            hitChoice = true;
+        } // no, nah, n (caps no matter)
+        else if (userChoice.equalsIgnoreCase("n") || userChoice.equalsIgnoreCase("no") || userChoice.equalsIgnoreCase("no")) {
+            hitChoice = false;
+        } // catch all
+        else {
+            System.out.println("Invalid input, try again.");
+            System.out.println("----------------");
+            hitMe(); // loop hitme function 
+        }
+        return hitChoice;
+    }
+
+    @Override
+    public void gameOver() {
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("Game over");
+        // display final cards
+        this.display();
+        // calculate scores for player and houes
+        int playerScore = game.score(game.getPlayerCards());
+        int houseScore = game.score(game.getHouseCards());
+        // display scores
+        System.out.println("Your Score: " + playerScore);
+        System.out.println("House Score: " + houseScore);
+        // W or L?
+        // LLLLL bust
+        if (playerScore > 21) {
+            System.out.println("You Bust!");
+            // W: player <= 21, house >21 OR player & house <=21 and player > house
+        } else if (((playerScore <= 21) && (houseScore > 21)) || ((playerScore <= 21) && (houseScore <= 21) && (playerScore > houseScore))) {
+            System.out.println("You Win!");
+// everything else is an L house favouritism
+        } else {
+            System.out.println("You Lost!");
+        }
+    }
+}

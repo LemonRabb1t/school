@@ -1,0 +1,66 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package coe318.lab7;
+
+// needed imports
+import java.io.InputStreamReader; // in
+import java.io.BufferedReader; // input
+import java.io.IOException; // exceptions
+
+/**
+ *
+ * @author N
+ */
+// read stdin and does end
+public class UserMain {
+
+    public static void main(String[] args) {
+        String in = "";
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            Circuit cir = Circuit.getInstance(); // new circuit
+
+            ///*
+            while (in.equalsIgnoreCase("Exit") == false) {
+                // get in
+                System.out.println("Please enter component: ");
+                in = br.readLine(); // input
+                String[] secs = in.split(" ", 4); // split in into data
+
+                // if spice
+                if (in.equalsIgnoreCase("spice")) {
+                    System.out.println(cir.toString() + "\nSpiced");
+
+                } // exit covered by while loop, just look for non exit in
+                else if (in.equalsIgnoreCase("Exit") == false) {
+                    // check for valid input structure
+                    // (v/r) n1 n2 v
+                    if (secs.length == 4) {
+                        // add a resist
+                        if (secs[0].equalsIgnoreCase("r")) {
+                            resistor res = new resistor(Integer.parseInt(secs[1]), Integer.parseInt(secs[2]), Integer.parseInt(secs[3]));
+                        } // add a v source
+                        else if (secs[0].equalsIgnoreCase("v")) {
+                            source sou = new source(Integer.parseInt(secs[1]), Integer.parseInt(secs[2]), Integer.parseInt(secs[3]));
+                        } // catch others 
+                        else {
+                            System.out.println("input was not understood");
+                        }
+
+                    } else {
+                        System.out.println("incorrect sized input");
+                    }
+                }
+            }
+            System.exit(0); // exit when done
+            //*/
+
+        } catch (IOException ioe) {
+            System.out.println("Uh oh spaghetti os\n");
+            System.out.println(ioe);
+        }
+
+    }
+}

@@ -1,0 +1,62 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package coe318.lab7;
+
+/**
+ *
+ * @author N
+ */
+
+// class exists so i dont have to rewrite shit
+public class componentParent {
+    private int count =0;
+    private String name;
+    private int n1, n2;
+    private double value;
+
+    public componentParent(int no1, int no2, double v) {
+        n1 = no1;
+        n2 = no2;
+        value = v;
+        
+    }
+
+    // get name
+    public String getName() {
+        return name;
+    }
+
+    // get nodes
+    public int getNode(int a) {
+        return switch (a) {
+            case 1 ->
+                n1;
+            case 2 ->
+                n2;
+            default ->
+                0;
+        };
+    }
+    
+    // get current count
+    public int getCount(){
+        return count;
+    }
+    
+    // set curret count
+    public void setCount(int a){
+        count = a;
+    }
+    // get value
+    public double getV(){
+        return value;
+    }
+    
+    // to string
+    @Override
+    public String toString(){
+        return "parent";
+    }
+}
