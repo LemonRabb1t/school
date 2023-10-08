@@ -1,0 +1,44 @@
+;********************************************************************
+;* Demonstration Program *
+;* *
+;* This program illustrates how to use the assembler. *
+;* It multiplies together two 8 bit numbers and leaves the result *
+;* in the ‘SUM’ location. *
+;* Author: Nini Yang *
+;********************************************************************
+
+; export symbols
+    XDEF Entry, _Startup  ; export 'Entry' symbol
+    ABSENTRY Entry        ; for absolute assembl: mark
+                        ; this as applicat. entry point 
+   ; Include derivative-specific def
+    
+    INCLUDE 'derivative.inc'                      
+                  
+
+;********************************************************************
+;* Code section *
+;********************************************************************
+            ORG $3000
+    
+MULTIPLICAND  fcb   10 ; First Number
+MULTIPLIER    fcb   11 ; Second Number
+PRODUCT       rmb 16 ; Result of addition
+
+;********************************************************************
+;* The actual program starts here *
+;********************************************************************
+    ORG $4000  
+    
+Entry:
+_Startup:
+    LDAA MULTIPLIER; Get the first number into ACCA
+    LDAB MULTIPLICAND 
+    MUL; multiply to it the second number
+    STAB PRODUCT ; and store the sum
+    SWI ; break to the monitor
+;********************************************************************
+;* Interrupt Vectors *
+;********************************************************************
+    ORG $FFFE
+    FDB Entry ; Reset Vector
