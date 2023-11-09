@@ -1,0 +1,19 @@
+
+% x1 Dn
+
+% T :
+T1 = 20;
+
+n_list : [-T1:T1];
+
+% x1:
+x1= @(t) cos((3*pi*t)/10) + 0.5*cos(pi*t/10);
+
+% for loop to run through n-list array
+for i = length(n_list)
+    % Dn = int x(t) * exp (-j*n_list*wo*t)
+    y = @(t) x1(t).*exp(-1i*n-list[i]*(2*pi*t/T1));
+    
+    % Dn f
+        
+end
