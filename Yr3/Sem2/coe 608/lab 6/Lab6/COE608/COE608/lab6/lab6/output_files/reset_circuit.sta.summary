@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'memClk'
+Slack : -18.220
+TNS   : -239.078
+
+Type  : Slow 1200mV 85C Model Setup 'cpuClk'
+Slack : -18.121
+TNS   : -1407.074
+
+Type  : Slow 1200mV 85C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : -6.260
+TNS   : -23.287
+
+Type  : Slow 1200mV 85C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -5.782
+TNS   : -55.864
+
+Type  : Slow 1200mV 85C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -0.747
+TNS   : -1.228
+
+Type  : Slow 1200mV 85C Model Hold 'cpuClk'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'memClk'
+Slack : 0.726
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'cpuClk'
+Slack : -3.938
+TNS   : -225.771
+
+Type  : Slow 1200mV 85C Model Removal 'cpuClk'
+Slack : 0.730
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -181.738
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -149.147
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'memClk'
+Slack : -16.741
+TNS   : -213.713
+
+Type  : Slow 1200mV 0C Model Setup 'cpuClk'
+Slack : -16.594
+TNS   : -1277.447
+
+Type  : Slow 1200mV 0C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : -5.835
+TNS   : -21.366
+
+Type  : Slow 1200mV 0C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -5.499
+TNS   : -52.444
+
+Type  : Slow 1200mV 0C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -0.545
+TNS   : -0.574
+
+Type  : Slow 1200mV 0C Model Hold 'cpuClk'
+Slack : 0.038
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'memClk'
+Slack : 0.743
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'cpuClk'
+Slack : -3.482
+TNS   : -193.591
+
+Type  : Slow 1200mV 0C Model Removal 'cpuClk'
+Slack : 0.664
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -181.694
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -147.431
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'memClk'
+Slack : -8.877
+TNS   : -65.537
+
+Type  : Fast 1200mV 0C Model Setup 'cpuClk'
+Slack : -8.748
+TNS   : -673.907
+
+Type  : Fast 1200mV 0C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : -2.815
+TNS   : -10.239
+
+Type  : Fast 1200mV 0C Model Setup 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -2.800
+TNS   : -21.307
+
+Type  : Fast 1200mV 0C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : -0.436
+TNS   : -1.271
+
+Type  : Fast 1200mV 0C Model Hold 'cpuClk'
+Slack : -0.074
+TNS   : -0.074
+
+Type  : Fast 1200mV 0C Model Hold 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'memClk'
+Slack : 0.052
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'cpuClk'
+Slack : -1.638
+TNS   : -82.190
+
+Type  : Fast 1200mV 0C Model Removal 'cpuClk'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpuClk'
+Slack : -3.000
+TNS   : -149.458
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'memClk'
+Slack : -3.000
+TNS   : -82.362
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_2'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cpu1:main_processor|Control_New:control_unit|present_state.state_0'
+Slack : 0.401
+TNS   : 0.000
+
+------------------------------------------------------------

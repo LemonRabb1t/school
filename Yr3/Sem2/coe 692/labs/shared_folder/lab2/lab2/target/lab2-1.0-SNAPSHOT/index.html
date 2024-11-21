@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SINIS Convenience</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            background-color: #7389a6; /* Light Pink Background */
+            color: #222831; /* Dark Grey Text Color */
+            font-family: 'Arial', sans-serif; /* Change the font-family as needed */
+        }
+
+        .custom-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .custom-form .form-group {
+            width: 100%;
+            max-width: 300px; /* Adjust the maximum width as needed */
+        }
+
+        .custom-form .form-control {
+            background-color: #f2f2f2; /* Light Grey Background for Input Boxes */
+            border: 1px solid #ccc; /* Border Color */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="container mt-5">
+    <h1 style="font-family:caveat" class="display-3 text-center">Welcome to SINI'S Convenience!</h1>
+    <p style="font-family:comic sans" class="lead text-center">Please login to your account below</p>
+
+    <form action="/lab2/Login" method="POST" class="custom-form needs-validation" novalidate>
+        <div class="form-group">
+            <label for="user">Username:</label>
+            <input type="text" class="form-control" id="user" name="user" placeholder="Username123" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pass">Password:</label>
+            <input type="password" class="form-control" id="pass" name="pass" maxlength="16" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Log In">
+        </div>
+    </form>
+
+    <div class="container mt-3 mb-5 p-4 border rounded bg-light shadow-sm">
+        <h2>New User?</h2>
+        <p>SINI'S Convenience is your go-to store for all your needs. Sign up now and enjoy exclusive discounts and offers!</p>
+
+        <div class="form-group">
+            <a href="/lab2/custCreateForm.html" class="btn btn-danger">Register</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

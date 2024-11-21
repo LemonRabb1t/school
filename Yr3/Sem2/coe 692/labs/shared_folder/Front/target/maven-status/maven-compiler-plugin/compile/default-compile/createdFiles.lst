@@ -1,0 +1,9 @@
+Helper/Customer.class
+Helper/Product.class
+Front/FrontEnd.class
+Helper/ProductXML.class
+Helper/CustomersXML.class
+Front/Authenticate.class
+business/Business.class
+business/XMLParser.class
+.netbeans_automatic_build

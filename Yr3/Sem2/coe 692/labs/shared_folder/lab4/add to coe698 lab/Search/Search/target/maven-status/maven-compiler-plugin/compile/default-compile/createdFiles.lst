@@ -1,0 +1,6 @@
+Endpoint/SearchResource.class
+Helper/Product.class
+Business/SearchBusiness.class
+Helper/ProductsXML.class
+Persistence/Product_CRUD.class
+Endpoint/ApplicationConfig.class

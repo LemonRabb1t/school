@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/student2/d26chiu/COE608/lab4b/simulation/qsim
+vdata_path
+Z1 !s100 6[G>CCJ`;CS8MCKc2F8PN1
+Z2 I@`H=NDfVUM_ZL@2Fm?HUi3
+Z3 V3B>Dkh:Wd=3Jzclm`9dYe3
+Z4 dC:\Users\andyc\Downloads\lab4B\lab4B\lab4b\simulation\qsim
+Z5 w1710188045
+Z6 8lab4b.vo
+Z7 Flab4b.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|lab4b.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1710188046.320000
+Z12 !s107 lab4b.vo|
+!s101 -O0
+vdata_path_vlg_check_tst
+!i10b 1
+!s100 N=FG9W3zKPE>>Z3LbdSD30
+I7YT3o321PbOi^;?D;eJf<2
+Z13 VDb<SL3dHWEIA;<o[I2>bK1
+R4
+Z14 w1710188044
+Z15 8CLRB.vwf.vt
+Z16 FCLRB.vwf.vt
+Z17 L0 105
+R8
+r1
+!s85 0
+31
+Z18 !s108 1710188046.416000
+Z19 !s107 CLRB.vwf.vt|
+Z20 !s90 -work|work|CLRB.vwf.vt|
+!s101 -O0
+R10
+vdata_path_vlg_sample_tst
+!i10b 1
+!s100 oV8:QR5fC0l2d5ZgW7T??1
+I4d>ZB:L_IhVE>29YMRb7i2
+Z21 V<o6IZ<OTzhNKeJA^@`7QI1
+R4
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vdata_path_vlg_vec_tst
+!i10b 1
+!s100 <LL:O9H6CHMH?VXhHJjTa0
+I`KTWkZ?:28AhBFP<V4F?;3
+Z22 V<2mQW@a1]Jke01i<dn2R20
+R4
+R14
+R15
+R16
+Z23 L0 2544
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

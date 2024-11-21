@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | SINI'S Convenience</title>
+        <!-- Include Bootstrap CSS (or your preferred CSS framework) -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            /* Custom Styles */
+
+            body {
+                font-family: 'caveat', sans-serif;
+                background-color: #daf9ff;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #70cfe3;
+                color: #e8e8ec;
+                padding: 10px;
+                text-align: center;
+            }
+
+            footer {
+                background-color: #70cfe3;
+                font-size: 10px;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .center-container {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+          
+
+            .login {
+                padding: 20px;
+                border-radius: 20px;
+                background-color: #fbdada;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                margin: 0 10px;
+                /* Adjust margins for spacing */
+                max-width: 400px;
+                /* Adjust the maximum width as needed */
+            }
+
+            /* New style for button group */
+            .button-group {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                align-content: center;
+                text-align: center;
+            }
+            .profile-button {
+                background-color: #70cfe3;
+                color: #ffffff;
+                border: none;
+                padding: 5px 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                float: right;
+            }
+            
+            .login-banner {
+                font-size: 16px;
+                color: grey;
+                padding: 10px;
+                text-align: right;
+            }
+            
+            .banner{
+                font-size:10px;
+                text-align: center;
+            }
+            
+
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            SINI'S Convenience
+        </header>
+
+
+        <!-- Login Banner -->
+        <div class="login-banner">
+            <!-- Profile Button -->
+            <form action="FrontEnd" method ="post">
+                <input type="hidden" name="pageName" value="skip"/>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-dark" value="skip">
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Center Container -->
+        <div class="center-container">
+
+            <div class="login">
+                <h1>Login</h1>
+                <p></p>
+
+                <form action="FrontEnd" method ="post">
+                    <div class="form-group">
+                        <input type="hidden" name="pageName" value="login"/>
+                        <label for="user" style="font-weight: bold;">Username:</label>
+                        <input type="text" class="form-control" id="user" name="username" placeholder="Username123" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass" style="font-weight: bold;">Password:</label>
+                        <input type="password" class="form-control" id="pass" name="password" maxlength="16" placeholder="Pass123" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-dark" value="login">
+                    </div>
+                </form>
+
+
+                <!-- Button group container -->
+                <div class="button-group">
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Deals Banner -->
+        <div class="banner">
+            <p>Check out our latest deals!</p>
+            <form action="Deals.jsp">
+                <input type="text" placeholder="Enter your email" name="email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            &copy; Sarah & Nini. All rights reserved.
+        </footer>
+
+    </body>
+
+</html>

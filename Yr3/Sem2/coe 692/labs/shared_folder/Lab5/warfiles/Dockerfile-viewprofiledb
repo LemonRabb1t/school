@@ -1,0 +1,8 @@
+FROM mysql:8.0.23
+
+ENV MYSQL DATABASE=VIEW_SNC 
+ENV MYSQL_ROOT_PASSWORD=student
+
+COPY VIEW_SNC.sql /docker-entrypoint-initdb.d
+
+EXPOSE 3306

@@ -1,0 +1,8 @@
+Frontend/Authenticate.class
+Helper/Customer.class
+Helper/SearchXML.class
+Helper/Product.class
+Helper/CustomersXML.class
+Business/Business.class
+Business/XMLParser.class
+Frontend/FrontEnd.class

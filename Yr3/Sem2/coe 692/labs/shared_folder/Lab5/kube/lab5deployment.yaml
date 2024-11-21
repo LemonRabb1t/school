@@ -1,0 +1,232 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: viewsnc-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: viewsnc
+spec:
+  selector:
+    app: viewsnc
+  ports:
+    - port: 3306
+      targetPort: 3306
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: viewsnc
+spec:
+  selector:
+    matchLabels:
+      app: viewsnc
+  template:
+    metadata:
+      labels:
+        app: viewsnc
+    spec:
+      containers:
+        - name: viewsnc
+          image: niniyang/coe692:View_SNC
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: storage
+              mountPath: /data/viewsnc
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: viewsnc-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: viewprofile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: viewprofile
+  template:
+    metadata:
+      labels:
+        app: viewprofile
+    spec:
+      containers:
+        - name: viewprofile
+          image: niniyang/coe692:viewprofile
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_URL
+              value: viewsnc:3306
+            - name: kubeMQAddress
+              value: 10.24.14.133:50000
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: holddb-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi
+---
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: searchsnc-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: searchsnc
+spec:
+  selector:
+    app: searchsnc
+  ports:
+    - port: 3306
+      targetPort: 3306
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: searchsnc
+spec:
+  selector:
+    matchLabels:
+      app: searchsnc
+  template:
+    metadata:
+      labels:
+        app: searchsnc
+    spec:
+      containers:
+        - name: searchsnc
+          image: niniyang/coe692:Search_SNC
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: storage
+              mountPath: /data/searchsnc
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: searchsnc-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: search
+  template:
+    metadata:
+      labels:
+        app: search
+    spec:
+      containers:
+        - name: search
+          image: niniyang/coe692:search
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_URL
+              value: searchsnc:3306
+            - name: kubeMQAddress
+              value: 10.24.14.133:50000
+          imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: niniyang/coe692:frontend
+          ports:
+            - containerPort: 8080
+          env:
+            - name: searchService
+              value: search:80
+
+            - name: viewprofileService
+              value: viewprofile:80
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: viewprofile
+spec:
+  selector:
+    app: viewprofile
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: holdbook
+spec:
+  selector:
+    app: holdbook
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: search
+spec:
+  selector:
+    app: search
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  selector:
+    app: frontend
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer

@@ -1,0 +1,7 @@
+Business/ViewBusiness.class
+Helper/Customer.class
+Persistence/Customer_CRUD.class
+Business/Messaging.class
+Helper/CustomersXML.class
+Endpoint/ViewResource.class
+Endpoint/ApplicationConfig.class
