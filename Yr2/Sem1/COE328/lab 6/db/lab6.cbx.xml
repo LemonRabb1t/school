@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab6">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux7" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux4" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux3" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux0" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux8" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux5" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux4" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux1" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux6" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux5" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux1" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux2" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux6" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux2" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux3" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux3" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux4" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux1" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux4" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux5" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux2" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux1" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux5" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|decode4to16:inst1|lpm_mux:Mux6" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst112|lpm_mux:Mux3" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst122|lpm_mux:Mux2" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab6pt3|sseg:inst234|lpm_mux:Mux6" CBX_FILE_NAME="mux_joc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

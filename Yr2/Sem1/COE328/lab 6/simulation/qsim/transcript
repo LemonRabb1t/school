@@ -1,0 +1,12 @@
+# do lab6.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lab6pt3
+# 
+# Top level modules:
+# 	lab6pt3
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lab6pt3_vlg_sample_tst
+# -- Compiling module lab6pt3_vlg_check_tst
+# ** Error: lab6.vt(74): near "/": syntax error, unexpected '/', expecting ')'
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./lab6.do line 4
